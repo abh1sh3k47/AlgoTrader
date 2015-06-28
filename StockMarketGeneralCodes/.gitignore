@@ -2,3 +2,6 @@
 /build/
 /settingsDEV.properties
 /logs/
+/orderDetails/
+/settings.properties
+/bin/
