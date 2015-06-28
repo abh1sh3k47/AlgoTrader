@@ -18,6 +18,11 @@ import com.algoTrader.types.shareKhan.ShareKhanOrderReportEntry;
 import com.algoTrader.workers.ShareKhanWorker;
 import com.algoTrader.workers.SharekhanOrderReportUpdater;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class SharekhanOrderReportFileUpdaterJob 
 {
 	private static Logger logger= Logger.getLogger(SharekhanOrderReportFileUpdaterJob.class);

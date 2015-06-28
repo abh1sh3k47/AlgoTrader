@@ -3,6 +3,11 @@ package com.algoTrader.brokerWebSessions;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanWebBrokerSession
 {
 	private HttpContext localContext;

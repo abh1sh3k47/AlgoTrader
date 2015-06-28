@@ -9,6 +9,11 @@ import com.algoTrader.types.Bet;
 import com.algoTrader.types.BidAskLists;
 import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanArbitrageWatcher extends Thread 
 {
 	private static Logger logger= Logger.getLogger(ShareKhanArbitrageWatcher.class);

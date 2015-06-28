@@ -12,6 +12,11 @@ import com.algoTrader.types.BidAskLists;
 import com.algoTrader.types.shareKhan.ShareKhanBidAskLists;
 import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class BidAskDownloaderPocJob 
 {
 	private static Logger logger= Logger.getLogger(BidAskDownloaderPocJob.class);

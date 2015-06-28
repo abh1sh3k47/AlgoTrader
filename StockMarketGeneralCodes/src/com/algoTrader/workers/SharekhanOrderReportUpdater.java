@@ -12,6 +12,11 @@ import com.algoTrader.types.shareKhan.ShareKhanOrderReportEntry;
 
 import static com.algoTrader.commons.Settings.*;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class SharekhanOrderReportUpdater 
 {
 	final String orderReportFilePath;

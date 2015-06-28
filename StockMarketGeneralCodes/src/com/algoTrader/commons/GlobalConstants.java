@@ -1,5 +1,10 @@
 package com.algoTrader.commons;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class GlobalConstants 
 {
 	public static final String ORDERID_DELIM = "<ORDERID>";

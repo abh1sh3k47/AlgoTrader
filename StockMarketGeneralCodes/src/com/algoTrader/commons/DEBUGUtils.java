@@ -5,6 +5,11 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class DEBUGUtils 
 {
 	public static void printStream(InputStream is)

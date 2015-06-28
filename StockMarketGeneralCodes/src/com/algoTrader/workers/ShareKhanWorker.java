@@ -32,6 +32,11 @@ import com.algoTrader.commons.CommonUtils;
 import com.algoTrader.commons.Settings;
 import com.algoTrader.parsingUtils.HtmlParsingUtils;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanWorker 
 {
 	private static Logger logger= Logger.getLogger(ShareKhanWorker.class);

@@ -1,22 +1,22 @@
 package com.algoTrader.parsingUtils;
 
-import static java.util.regex.Pattern.MULTILINE;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.http.ParseException;
 import org.apache.log4j.Logger;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class HtmlParsingUtils 
 {
 	private static Logger logger= Logger.getLogger(HtmlParsingUtils.class);

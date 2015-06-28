@@ -9,6 +9,11 @@ import org.apache.log4j.Logger;
 
 import com.algoTrader.brokerWebSessions.ShareKhanWebBrokerSession;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class Settings 
 {
 	private static Logger logger= Logger.getLogger(Settings.class);

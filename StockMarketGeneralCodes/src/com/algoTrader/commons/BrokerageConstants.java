@@ -5,6 +5,11 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class BrokerageConstants 
 {	
 	public static final String SHAREKHAN_LOGIN_URL_KEY = "shareKhan.Login.URI";

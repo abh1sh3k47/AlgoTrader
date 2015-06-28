@@ -8,6 +8,11 @@ import org.apache.log4j.Logger;
 import com.algoTrader.parsingUtils.ShareKhanParserUtil;
 import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanParserFacade 
 {
 	private static Logger logger= Logger.getLogger(ShareKhanParserFacade.class);

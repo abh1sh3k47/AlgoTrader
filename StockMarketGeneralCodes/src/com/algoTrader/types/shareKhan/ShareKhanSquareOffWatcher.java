@@ -11,6 +11,11 @@ import com.algoTrader.types.Bet.BetType;
 import com.algoTrader.types.BidAskLists;
 import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanSquareOffWatcher extends Thread 
 {
 	private static Logger logger= Logger.getLogger(ShareKhanSquareOffWatcher.class);

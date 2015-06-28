@@ -1,5 +1,10 @@
 package com.algoTrader.types.shareKhan;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanOrderReportEntry {
 	private String orderID = "";
 	private String exch = "";

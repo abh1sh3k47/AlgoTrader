@@ -7,6 +7,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class BidAskLists 
 {
 	protected Set<Bet> bids;

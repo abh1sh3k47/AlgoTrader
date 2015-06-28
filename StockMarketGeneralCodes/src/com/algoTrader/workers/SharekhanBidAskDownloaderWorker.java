@@ -11,6 +11,11 @@ import com.algoTrader.parsingUtils.ShareKhanParserUtil;
 import com.algoTrader.types.shareKhan.ShareKhanBidAskLists;
 import com.algoTrader.types.shareKhan.ShareKhanParserFacade;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class SharekhanBidAskDownloaderWorker implements Callable<ShareKhanBidAskLists>
 {
 	private static Logger logger= Logger.getLogger(SharekhanBidAskDownloaderWorker.class);

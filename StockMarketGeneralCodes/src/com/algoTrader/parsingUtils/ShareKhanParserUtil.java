@@ -1,7 +1,5 @@
 package com.algoTrader.parsingUtils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
@@ -14,8 +12,12 @@ import com.algoTrader.types.Bet;
 import com.algoTrader.types.Bet.BetType;
 import com.algoTrader.types.BidAskLists;
 import com.algoTrader.types.shareKhan.ShareKhanBidAskLists;
-import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanParserUtil extends HtmlParsingUtils 
 {
 	private static Logger logger = Logger.getLogger(ShareKhanParserUtil.class);

@@ -10,6 +10,11 @@ import com.algoTrader.commons.Settings;
 import com.algoTrader.types.shareKhan.ShareKhanArbitrageWatcher;
 import com.algoTrader.workers.ShareKhanWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanArbitrageWatcherJob 
 {
 	private static Logger logger= Logger.getLogger(SharekhanOrderReportFileUpdaterJob.class);

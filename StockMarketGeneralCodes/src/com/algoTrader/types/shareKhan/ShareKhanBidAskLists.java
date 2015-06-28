@@ -2,6 +2,11 @@ package com.algoTrader.types.shareKhan;
 
 import com.algoTrader.types.BidAskLists;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class ShareKhanBidAskLists
 {
 	private String scrip;

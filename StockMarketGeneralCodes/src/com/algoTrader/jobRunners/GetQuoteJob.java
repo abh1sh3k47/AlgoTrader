@@ -16,6 +16,11 @@ import com.algoTrader.types.BidAskLists;
 import com.algoTrader.types.shareKhan.ShareKhanBidAskLists;
 import com.algoTrader.workers.SharekhanBidAskDownloaderWorker;
 
+/**
+ * 
+ * @author abh1sh3k47
+ *
+ */
 public class GetQuoteJob 
 {
 	private static Logger logger = Logger.getLogger(GetQuoteJob.class);
