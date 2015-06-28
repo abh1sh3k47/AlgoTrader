@@ -1,0 +1,1 @@
+java -cp lib/* com.algoTrader.jobRunners.ShareKhanArbitrageWatcherJob 10000 WIPRO ONGC

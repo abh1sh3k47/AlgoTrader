@@ -1,0 +1,4 @@
+
+
+1> Scrip Timestamp Ltp Bid-Price,Bid-Volume... Ask-Price,Ask-Volume ... 
+   

@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<project name="Build AlgoTrader" default="compress">
+
+	<property name="parent.dir" location=".." />
+
+	<path id="classpath">
+		<fileset dir="${parent.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="../build" />
+		<mkdir dir="../binary" />
+		<mkdir dir="../binary/lib" />
+		<mkdir dir="../binary/orderDetails" />
+		<mkdir dir="../binary/data" />
+		<delete>
+			<fileset dir="../build" includes="**" />
+			<fileset dir="../binary" includes="**" />
+		</delete>
+	</target>
+
+	<target name="clean" depends="init">
+		<delete>
+			<fileset dir="${parent.dir}/binary" includes="*" />
+			<fileset dir="${parent.dir}/binary" includes="*/*" />
+			<fileset dir="${parent.dir}/binary" includes="*/*/*" />
+			<fileset dir="${parent.dir}/binary" includes="*/*/*/*" />
+		</delete>
+	</target>
+
+	<target name="compile" description="compile the java source files" depends="clean">
+		<javac srcdir="../src" destdir="../build" classpathref="classpath">
+		</javac>
+	</target>
+
+	<target name="compress" depends="compile">
+		<copy todir="${parent.dir}/build/">
+			<fileset dir="${parent.dir}/src">
+				<include name="*.properties" />
+			</fileset>
+		</copy>
+		<jar destfile="${parent.dir}/Binary/lib/AlgoTrader.jar" basedir="${parent.dir}/build" />
+		<antcall target="copyDependancies">
+		</antcall>
+	</target>
+
+	<target name="copyDependancies">
+		<copy todir="${parent.dir}/binary">
+			<fileset dir="${parent.dir}">
+				<include name="*.properties" />
+				<include name="*.bat" />
+			</fileset>
+		</copy>
+		<copy todir="${parent.dir}/binary/lib" flatten="true">
+			<fileset dir="${parent.dir}">
+				<include name="*/*.jar" />
+				<include name="*/*/*.jar" />
+				<include name="*/*/*/*.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+</project>
