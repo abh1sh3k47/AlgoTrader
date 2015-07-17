@@ -15,6 +15,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
 import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -201,6 +202,38 @@ public class ShareKhanWorker
 		
 		return dom;
 	}
+	
+	//JUST A SKELETON FOR NOW
+	public long executeOrder( /* Order order*/) throws ParseException, IOException
+	{
+		HttpGet orderTableGet = new HttpGet(SHAREKHAN_ORDER_TABLE_URL);
+		
+		
+		
+		HttpPost httpPost = new HttpPost(SHAREKHAN_ORDER_EXECUTE_URL);
+		List <NameValuePair> nvps = new ArrayList <NameValuePair>();
+		nvps.add(new BasicNameValuePair("",""));
+		httpPost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		
+		HttpResponse response = httpClient.execute(httpPost, brokerSession.getLocalContext());
+		HttpEntity entity = response.getEntity();
+		String dom = EntityUtils.toString(entity);
+		//
+		//
+		//
+		//
+		
+		checkOrderConfirmation(0);
+		return 0;
+	}
+	
+	public void checkOrderConfirmation(long orderId)
+	{
+		HttpGet orderConfirmationGet = new HttpGet(SHAREKHAN_ORDER_CONFIRMATION_URL.replace(ORDERID_DELIM,""+orderId));
+		
+		//PARSE and check
+	}
+	
 	
 	public static void main(String ... args)
 	{
