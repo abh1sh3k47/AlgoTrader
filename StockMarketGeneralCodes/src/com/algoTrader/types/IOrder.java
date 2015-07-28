@@ -5,5 +5,4 @@ package com.algoTrader.types;
 public interface IOrder 
 {
 	
-
 }

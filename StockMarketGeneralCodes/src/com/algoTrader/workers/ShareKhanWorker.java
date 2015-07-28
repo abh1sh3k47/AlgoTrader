@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -21,6 +22,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
@@ -207,10 +209,11 @@ public class ShareKhanWorker
 	public long executeOrder( /* Order order*/) throws ParseException, IOException
 	{
 		HttpGet orderTableGet = new HttpGet(SHAREKHAN_ORDER_TABLE_URL);
-		
-		
+		orderTableGet.addHeader(new BasicHeader("Referer","https://newtrade.sharekhan.com/rmmweb/ocs.sk"));
 		
 		HttpPost httpPost = new HttpPost(SHAREKHAN_ORDER_EXECUTE_URL);
+		
+		
 		List <NameValuePair> nvps = new ArrayList <NameValuePair>();
 		nvps.add(new BasicNameValuePair("",""));
 		httpPost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
@@ -220,8 +223,9 @@ public class ShareKhanWorker
 		String dom = EntityUtils.toString(entity);
 		//
 		//
-		//
-		//
+		//Add Headers
+		//Origin: https://newtrade.sharekhan.com
+		//Referer: https://newtrade.sharekhan.com/rmmweb/ocs.sk?execute=neworder&ctr=0
 		
 		checkOrderConfirmation(0);
 		return 0;

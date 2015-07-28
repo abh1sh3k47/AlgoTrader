@@ -1,25 +1,27 @@
 package com.algoTrader.types.shareKhan;
 
+import java.util.Date;
+
 import com.algoTrader.types.IOrder;
 import com.algoTrader.types.StockMarket;
 
 public class SharekhanOrder implements IOrder
 {
 	private String scrip = "";
-	private BuySell	buysell = null;
-	private String price = "107.65";
+	private BuySell	buySell = BuySell.BUY;
+	private double price = 107.65d;
 	private int quantity = 1;
-	private String ordertype = "Limit";
-	private String validity	= "IOC";
+	private OrderType orderType = OrderType.Limit;
+	private Validity orderValidity	= Validity.IOC;
 	private StockMarket exchangecode = StockMarket.BSE;
 
-	private String disclosedorderqty = "0";
-	private String tprice = "0.0";
-	private String stoplossvalidity	= "GFD";
+	private int disclosedorderqty = 0;
+	private double tprice = 0.0d;
+	private Validity stoplossValidity	= Validity.GFD;
 	private String bktlossstoploss = "0";
 	private String stoplossvaliditydate	= "20/07/2015";
 	private String bktlossprice	= "0";
-	private String dpclient	= "21657328";
+	private long dpclient	= 21657328;
 
 	//Not important args
 	private String comment	= "ajay";
@@ -30,8 +32,24 @@ public class SharekhanOrder implements IOrder
 
 	public static void main(String[] args) 
 	{
-		BuySell b = BuySell.SHORTSELL;
-		System.out.println(b);
+		//BuySell b = BuySell.SHORTSELL;
+		//System.out.println(b);
+		
+		Date d;
+		
+		
+		OrderType ot = OrderType.Limit;
+		System.out.println(ot);
+	}
+	
+	public static enum Validity
+	{
+		IOC,GFD,NONE;
+	}
+	
+	public static enum OrderType
+	{
+		Limit,Market;
 	}
 	
 	public static enum BuySell 
